@@ -19,6 +19,14 @@ const Header = () => {
     dispatch(getDatas());
   };
 
+  // === TRANSLATIONS ===
+  const t = {
+    home: language === "turkish" ? "Ana Sayfa" : "Home",
+    skills: language === "turkish" ? "Yetenekler" : "Skills",
+    projects: language === "turkish" ? "Projeler" : "Projects",
+    about: language === "turkish" ? "Hakkımda" : "About Me",
+  };
+
   const menuLinkClass = ({ isActive }) =>
     `text-sm hover:underline ${
       isActive ? "font-semibold" : "text-gray-700 dark:text-gray-200"
@@ -46,16 +54,19 @@ const Header = () => {
         {/* DESKTOP MENU */}
         <div className="hidden md:flex items-center gap-6 pr-6">
           <NavLink to="/" className={menuLinkClass}>
-            Home
+            {t.home}
           </NavLink>
+
           <NavLink to="/skills" className={menuLinkClass}>
-            Skills
+            {t.skills}
           </NavLink>
+
           <NavLink to="/projects" className={menuLinkClass}>
-            Projects
+            {t.projects}
           </NavLink>
+
           <NavLink to="/about" className={menuLinkClass}>
-            About Me
+            {t.about}
           </NavLink>
 
           {/* LANG */}
@@ -74,14 +85,6 @@ const Header = () => {
               EN
             </button>
           </div>
-
-          {/* DARK MODE */}
-          {/* <button
-            onClick={() => dispatch(toggleDarkMode())}
-            className="border rounded-full px-3 py-1 text-xs"
-          >
-            {darkMode ? "Light" : "Dark"}
-          </button> */}
         </div>
 
         {/* MOBILE */}
@@ -102,14 +105,6 @@ const Header = () => {
               EN
             </button>
           </div>
-
-          {/* DARK MODE */}
-          {/* <button
-            onClick={() => dispatch(toggleDarkMode())}
-            className="border rounded-full px-3 py-1 text-xs"
-          >
-            {darkMode ? "Light" : "Dark"}
-          </button> */}
 
           {/* MOBILE MENU BUTTON */}
           <button
@@ -133,28 +128,31 @@ const Header = () => {
             className={menuLinkClass}
             onClick={() => setMenuOpen(false)}
           >
-            Home
+            {t.home}
           </NavLink>
+
           <NavLink
             to="/skills"
             className={menuLinkClass}
             onClick={() => setMenuOpen(false)}
           >
-            Skills
+            {t.skills}
           </NavLink>
+
           <NavLink
             to="/projects"
             className={menuLinkClass}
             onClick={() => setMenuOpen(false)}
           >
-            Projects
+            {t.projects}
           </NavLink>
+
           <NavLink
             to="/about"
             className={menuLinkClass}
             onClick={() => setMenuOpen(false)}
           >
-            About Me
+            {t.about}
           </NavLink>
         </div>
       </div>

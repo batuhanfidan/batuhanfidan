@@ -9,12 +9,20 @@ const Home = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const data = useSelector((state) => state.get_data);
+  const language = useSelector((state) => state.language);
 
   useEffect(() => {
     dispatch(getDatas());
   }, [dispatch]);
 
   if (!data) return null;
+
+  // === TRANSLATIONS ===
+  const t = {
+    skills: language === "turkish" ? "Yetenekler" : "Skills",
+    projects: language === "turkish" ? "Projeler" : "Projects",
+    about: language === "turkish" ? "Hakkımda" : "About Me",
+  };
 
   return (
     <main
@@ -85,17 +93,17 @@ const Home = () => {
         "
         >
           <CircleButton
-            text="Skills"
+            text={t.skills}
             color="bg-yellow-400"
             onClick={() => navigate("/skills")}
           />
           <CircleButton
-            text="Projects"
+            text={t.projects}
             color="bg-red-400"
             onClick={() => navigate("/projects")}
           />
           <CircleButton
-            text="About Me"
+            text={t.about}
             color="bg-cyan-400"
             onClick={() => navigate("/about")}
           />
