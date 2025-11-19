@@ -1,23 +1,20 @@
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { getDatas } from "../store/actions/action";
 import CircleButton from "./CircleButton";
 import foto from "../assets/foto.jpg";
 
 const Home = () => {
-  const dispatch = useDispatch();
   const navigate = useNavigate();
-  const data = useSelector((state) => state.get_data);
+
+  const allData = useSelector((state) => state.get_data);
   const language = useSelector((state) => state.language);
 
-  useEffect(() => {
-    dispatch(getDatas());
-  }, [dispatch]);
+  if (!allData) return null;
 
-  if (!data) return null;
+  const currentData = allData[language];
 
-  // === TRANSLATIONS ===
+  if (!currentData) return null;
+
   const t = {
     skills: language === "turkish" ? "Yetenekler" : "Skills",
     projects: language === "turkish" ? "Projeler" : "Projects",
@@ -73,15 +70,15 @@ const Home = () => {
     "
       >
         <h1 className="text-5xl sm:text-6xl font-bold mb-6">
-          {data.hero.hello}
+          {currentData.hero.hello}
         </h1>
 
         <h2 className="text-lg sm:text-xl font-semibold mb-3">
-          {data.hero.aboutTitle}
+          {currentData.hero.aboutTitle}
         </h2>
 
         <p className="text-gray-700 dark:text-gray-300 text-sm sm:text-base leading-relaxed mb-10 px-2 lg:px-0">
-          {data.hero.aboutText}
+          {currentData.hero.aboutText}
         </p>
 
         {/* BUTONLAR */}

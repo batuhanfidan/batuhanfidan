@@ -18,6 +18,7 @@ const Footer = () => {
             href="https://www.linkedin.com/in/batuhanfidan07/"
             className="hover:text-black dark:hover:text-white transition"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Linkedin
           </a>
@@ -25,6 +26,7 @@ const Footer = () => {
             href="https://github.com/batuhanfidan"
             className="hover:text-black dark:hover:text-white transition"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Github
           </a>

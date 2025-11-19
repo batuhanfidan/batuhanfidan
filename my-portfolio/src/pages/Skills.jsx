@@ -2,9 +2,13 @@ import { useSelector } from "react-redux";
 
 const Skills = () => {
   const language = useSelector((state) => state.language);
-  const data = useSelector((state) => state.get_data);
+  const allData = useSelector((state) => state.get_data);
 
-  if (!data || !data.skills) return null;
+  if (!allData) return null;
+
+  const currentData = allData[language];
+
+  if (!currentData || !currentData.skills) return null;
 
   return (
     <section className="max-w-6xl mx-auto mt-12 px-6 bg-white dark:bg-[#111] text-black dark:text-white">
@@ -34,7 +38,7 @@ const Skills = () => {
           animate-[skillsFade_0.7s_ease-out_forwards]
         "
       >
-        {data.skills.map((skill, index) => (
+        {currentData.skills.map((skill, index) => (
           <div
             key={index}
             className="
@@ -51,7 +55,7 @@ const Skills = () => {
               animate-[popItem_0.6s_ease-out_forwards]
             "
             style={{
-              animationDelay: `${index * 0.08}s`, // sırayla gelsin
+              animationDelay: `${index * 0.08}s`,
             }}
           >
             <img

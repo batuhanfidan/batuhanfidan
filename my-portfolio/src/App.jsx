@@ -1,16 +1,25 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getDatas } from "./store/actions/action";
 
 import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Home from "./components/Home";
 
-import { useSelector } from "react-redux";
-
 function App() {
   const darkMode = useSelector((state) => state.darkMode);
+  const dispatch = useDispatch();
+  const data = useSelector((state) => state.get_data);
+
+  useEffect(() => {
+    if (!data) {
+      dispatch(getDatas());
+    }
+  }, [dispatch, data]);
 
   return (
     <div className={darkMode ? "dark" : ""}>

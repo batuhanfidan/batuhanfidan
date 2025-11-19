@@ -19,12 +19,7 @@ export const reducer = (state = initialState, action) => {
     case GET_DATA:
       return {
         ...state,
-        get_data:
-          action.payload && action.payload[0]
-            ? state.language === "english"
-              ? action.payload[0].english
-              : action.payload[0].turkish
-            : [],
+        get_data: action.payload ? action.payload[0] : null,
       };
 
     case TURKISH:

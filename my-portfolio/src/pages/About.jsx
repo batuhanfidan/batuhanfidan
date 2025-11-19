@@ -6,12 +6,16 @@ import { HiAcademicCap } from "react-icons/hi";
 
 const About = () => {
   const language = useSelector((state) => state.language);
-  const data = useSelector((state) => state.get_data);
+  const allData = useSelector((state) => state.get_data);
 
-  if (!data) return null;
+  if (!allData) return null;
 
-  const content = data.aboutMe;
-  if (!content || !content.info) return null;
+  const currentData = allData[language];
+
+  if (!currentData || !currentData.aboutMe) return null;
+
+  const content = currentData.aboutMe;
+  if (!content.info) return null;
 
   return (
     <div

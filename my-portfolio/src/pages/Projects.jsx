@@ -2,9 +2,13 @@ import { useSelector } from "react-redux";
 
 const Projects = () => {
   const language = useSelector((state) => state.language);
-  const data = useSelector((state) => state.get_data);
+  const allData = useSelector((state) => state.get_data);
 
-  if (!data || !data.projects) return null;
+  if (!allData) return null;
+
+  const currentData = allData[language];
+
+  if (!currentData || !currentData.projects) return null;
 
   return (
     <section className="max-w-6xl mx-auto mt-12 px-6 pb-20">
@@ -24,7 +28,7 @@ const Projects = () => {
 
       {/* PROJECT LIST */}
       <div className="flex flex-col gap-32">
-        {data.projects.map((project, index) => (
+        {currentData.projects.map((project, index) => (
           <div
             key={index}
             className="
@@ -93,7 +97,7 @@ const Projects = () => {
                   <a
                     href={project.website}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 text-blue-600 dark:text-blue-400 underline hover:opacity-80"
                   >
                     <svg
@@ -117,7 +121,7 @@ const Projects = () => {
                   <a
                     href={project.github}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 text-blue-600 dark:text-blue-400 underline hover:opacity-80"
                   >
                     <svg

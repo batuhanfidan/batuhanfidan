@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { getDatas, setTurkish, setEnglish } from "../store/actions/action";
+import { setTurkish, setEnglish } from "../store/actions/action";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -16,7 +16,6 @@ const Header = () => {
     } else {
       dispatch(setEnglish());
     }
-    dispatch(getDatas());
   };
 
   // === TRANSLATIONS ===
