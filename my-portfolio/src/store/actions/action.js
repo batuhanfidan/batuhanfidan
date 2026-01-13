@@ -8,7 +8,7 @@ export const GET_DATA = "GET_DATA";
 export const getDatas = () => async (dispatch) => {
   try {
     const res = await axios.get(
-      "https://66911f0826c2a69f6e8e889c.mockapi.io/api/v1/data"
+      "https://696611e2f6de16bde44c114e.mockapi.io/data"
     );
     console.log("🔵 ACTION - API RESPONSE:", res.data);
     dispatch({ type: GET_DATA, payload: res.data });
