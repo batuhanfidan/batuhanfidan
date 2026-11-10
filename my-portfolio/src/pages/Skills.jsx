@@ -1,74 +1,49 @@
 import { useSelector } from "react-redux";
+import PageHeader from "../components/PageHeader";
+
+const tilts = ["-rotate-2", "rotate-1", "rotate-2", "-rotate-1"];
 
 const Skills = () => {
   const language = useSelector((state) => state.language);
   const allData = useSelector((state) => state.get_data);
-
-  if (!allData) return null;
-
-  const currentData = allData[language];
-
-  if (!currentData || !currentData.skills) return null;
+  const tr = language === "turkish";
+  const skills = allData[language].skills;
 
   return (
-    <section className="max-w-6xl mx-auto mt-12 px-6 bg-white dark:bg-[#111] text-black dark:text-white">
-      <h1 className="text-3xl font-bold mb-6">
-        {language === "turkish" ? "Yeteneklerim" : "My Skills"}
-      </h1>
+    <section className="max-w-6xl mx-auto px-5 md:px-8 pt-12 md:pt-16">
+      <PageHeader
+        color="bg-sun"
+        title={tr ? "Yetenekler" : "Skills"}
+        subtitle={
+          tr
+            ? "Projelerimde kullandığım diller, kütüphaneler ve araçlar."
+            : "The languages, libraries and tools I use in my projects."
+        }
+      />
 
-      <p className="text-sm text-gray-600 dark:text-gray-300 mb-8">
-        {language === "turkish"
-          ? "Kullandığım teknolojiler ve araçlar aşağıdadır."
-          : "Here are the technologies and tools I use."}
-      </p>
-
-      {/* GRID */}
-      <div
-        className="
-          grid 
-          grid-cols-2 
-          sm:grid-cols-3 
-          md:grid-cols-4 
-          lg:grid-cols-5 
-          xl:grid-cols-6 
-          gap-10 
-          place-items-center
-
-          opacity-0 
-          animate-[skillsFade_0.7s_ease-out_forwards]
-        "
-      >
-        {currentData.skills.map((skill, index) => (
-          <div
-            key={index}
-            className="
-              flex 
-              flex-col 
-              items-center 
-              gap-3 
-              transition-all 
-              duration-200 
-              hover:scale-110
-              cursor-pointer
-
-              opacity-0
-              animate-[popItem_0.6s_ease-out_forwards]
-            "
-            style={{
-              animationDelay: `${index * 0.08}s`,
-            }}
+      <ul className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-8 sm:gap-x-6 sm:gap-y-10">
+        {skills.map((skill, index) => (
+          <li
+            key={skill.name}
+            className="animate-pop flex flex-col items-center gap-3"
+            style={{ animationDelay: `${200 + index * 45}ms` }}
           >
-            <img
-              src={skill.image}
-              alt={skill.name}
-              className="w-28 h-28 object-contain drop-shadow-lg"
-            />
-            <span className="text-sm sm:text-base text-gray-700 dark:text-gray-200 text-center">
+            <div
+              className={`group w-full aspect-square max-w-[120px] rounded-3xl bg-white border border-line p-4 sm:p-5 grid place-items-center shadow-[0_8px_0_-3px_var(--line)] ${tilts[index % tilts.length]} hover:rotate-0 hover:-translate-y-2 hover:shadow-[0_14px_0_-3px_var(--sun)] transition-all duration-300`}
+            >
+              <img
+                src={skill.image}
+                alt=""
+                loading="lazy"
+                className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
+              />
+            </div>
+            <span className="text-sm font-medium text-ink text-center">
               {skill.name}
             </span>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 };

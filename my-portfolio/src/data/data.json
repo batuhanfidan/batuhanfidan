@@ -1,0 +1,348 @@
+{
+  "english": {
+    "hero": {
+      "hello": "Hello",
+      "aboutTitle": "I'm Batuhan",
+      "aboutText": "I'm a full-stack developer focused on building modern, scalable, and user-friendly applications. I work with React, Redux, Tailwind, Node.js, Java, Spring Boot, and SQL. With strong analytical skills and experience in communication and problem solving, I create efficient digital solutions and continuously improve myself by building new projects."
+    },
+    "aboutMe": {
+      "info": {
+        "name": "Batuhan Fidan",
+        "birth": "07.07.1998",
+        "location": "Bursa / Turkey",
+        "education": "Bursa Uludag University"
+      },
+      "desc": [
+        "Hello, I'm Batuhan. I am a full-stack developer focused on building modern, scalable, and user-friendly digital solutions. During my full-stack training, I worked extensively with React, JavaScript, HTML, CSS, Redux, Tailwind, Node.js, Java, Spring Boot, and SQL.",
+        "I previously worked in the education consultancy sector, which helped me strengthen my communication, analytical thinking, and problem-solving skills. With strong discipline and passion for software development, I continue to learn new technologies and build projects every day.",
+        "My goal is to combine my analytical mindset with my technical skills to create efficient and modern applications that provide real value to users."
+      ]
+    },
+    "skills": [
+      {
+        "name": "JavaScript",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg"
+      },
+      {
+        "name": "TypeScript",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/typescript/typescript-original.svg"
+      },
+      {
+        "name": "HTML5",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg"
+      },
+      {
+        "name": "CSS3",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/css3/css3-original.svg"
+      },
+      {
+        "name": "React",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg"
+      },
+      {
+        "name": "Tailwind CSS",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/tailwindcss/tailwindcss-original.svg"
+      },
+      {
+        "name": "Redux",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/redux/redux-original.svg"
+      },
+      {
+        "name": "Java",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/java/java-original.svg"
+      },
+      {
+        "name": "Spring Boot",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/spring/spring-original.svg"
+      },
+      {
+        "name": "SQL",
+        "image": "https://astro-provider-logos.s3.us-east-2.amazonaws.com/apache-airflow-providers-common-sql.png"
+      },
+      {
+        "name": "PostgreSQL",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/postgresql/postgresql-original.svg"
+      },
+      {
+        "name": "Cypress",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/cypressio/cypressio-original.svg"
+      },
+      {
+        "name": "VS Code",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/vscode/vscode-original.svg"
+      },
+      {
+        "name": "IntelliJ IDEA",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/intellij/intellij-original.svg"
+      },
+      {
+        "name": "Figma",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/figma/figma-original.svg"
+      },
+      {
+        "name": "MS Office",
+        "image": "https://eniyikurs.net/2239/images/-1431387616f04cc49cf2cf5dffdf5ef9.jpg"
+      }
+    ],
+    "projects": [
+      {
+        "title": "Salise",
+        "technologies": [
+          "React Native",
+          "Expo",
+          "TypeScript",
+          "Reanimated"
+        ],
+        "platform": "android",
+        "store": "https://play.google.com/store/apps/details?id=com.salise.game",
+        "isNew": true,
+        "image": "/projects/salise-en.png",
+        "description": "A reflex and timing game played to the millisecond. The cursor never stops; tap the moment it enters the target band. As your streak grows the speed rises, the band narrows and curses bend the rules. Includes a 100-level campaign and an endless arcade mode. Live on Google Play."
+      },
+      {
+        "title": "Bilgimetre",
+        "description": "A general knowledge quiz split into categories from history and sports to music and mythology. Pick a category, mode, difficulty and question count, then play with multiple choice or typed answers.",
+        "technologies": [
+          "React",
+          "TypeScript",
+          "Tailwind"
+        ],
+        "image": "/projects/bilgimetre.png",
+        "website": "https://bilgimetre-life.vercel.app/",
+        "github": "https://github.com/batuhanfidan/bilgimetre"
+      },
+      {
+        "title": "Timing Football Game",
+        "description": "Millisecond timing based football game made with React and TypeScript. Still in development.",
+        "technologies": [
+          "React",
+          "TypeScript",
+          "Tailwind"
+        ],
+        "image": "https://i.hizliresim.com/sudzg86.png",
+        "website": "https://game-wine-phi.vercel.app/",
+        "github": "https://github.com/batuhanfidan/game"
+      },
+      {
+        "title": "Quick Blessing",
+        "description": "Fun site made with React and TypeScript.",
+        "technologies": [
+          "React",
+          "TypeScript",
+          "Tailwind"
+        ],
+        "image": "https://i.hizliresim.com/jh9frdr.png",
+        "website": "https://quickblessing.vercel.app/",
+        "github": "https://github.com/batuhanfidan/quickblessing"
+      },
+      {
+        "title": "Pizza Ordering App",
+        "description": "I developed a pizza ordering website with a user-friendly interface for selecting pizzas, managing the cart, and completing orders. The site uses HTML5, CSS3, JavaScript, and React.",
+        "technologies": [
+          "React",
+          "Axios",
+          "Redux",
+          "JavaScript"
+        ],
+        "image": "https://i.hizliresim.com/8mesyw3.png",
+        "website": "https://pizza-challange.vercel.app/",
+        "github": "https://github.com/batuhanfidan/Pizza-challange"
+      },
+      {
+        "title": "Sudoku",
+        "description": "Sudoku with a simple interface.",
+        "technologies": [
+          "React",
+          "TypeScript"
+        ],
+        "image": "https://i.hizliresim.com/s5104zc.png",
+        "website": "https://sudoku-eight-wine.vercel.app/",
+        "github": "https://github.com/batuhanfidan/sudoku"
+      },
+      {
+        "title": "Tetris",
+        "description": "Tetris with a simple interface.",
+        "technologies": [
+          "React",
+          "JavaScript"
+        ],
+        "image": "https://i.hizliresim.com/kvgh3v3.png",
+        "website": "https://tetris-one-sandy.vercel.app/",
+        "github": "https://github.com/batuhanfidan/tetris"
+      }
+    ]
+  },
+  "turkish": {
+    "hero": {
+      "hello": "Merhaba",
+      "aboutTitle": "Ben Batuhan",
+      "aboutText": "Modern, ölçeklenebilir ve kullanıcı dostu uygulamalar geliştiren bir full-stack developerım. React, Redux, Tailwind, Node.js, Java, Spring Boot ve SQL teknolojileriyle çalışıyorum. Analitik düşünme, iletişim ve problem çözme becerilerimle verimli dijital çözümler üretiyor ve her gün yeni projeler geliştirerek kendimi geliştirmeye devam ediyorum."
+    },
+    "aboutMe": {
+      "info": {
+        "name": "Batuhan Fidan",
+        "birth": "07.07.1998",
+        "location": "Bursa / Türkiye",
+        "education": "Bursa Uludağ Üniversitesi"
+      },
+      "desc": [
+        "Merhaba, ben Batuhan. Modern, ölçeklenebilir ve kullanıcı dostu dijital çözümler geliştirmeye odaklanan bir full-stack developerım. Full-stack eğitim sürecimde React, JavaScript, HTML, CSS, Redux, Tailwind, Node.js, Java, Spring Boot ve SQL üzerine yoğunlaştım.",
+        "Daha önce eğitim danışmanlığı sektöründe çalıştım ve bu süreç iletişim, analiz ve problem çözme yeteneklerimi güçlendirdi. Disiplinli çalışma alışkanlığım ve yazılım geliştirme tutkum sayesinde her gün yeni teknolojiler öğrenmeye ve projeler geliştirmeye devam ediyorum.",
+        "Hedefim, analitik düşünme becerilerimi teknik yeteneklerimle birleştirerek kullanıcıya gerçek değer sağlayan verimli ve modern uygulamalar geliştirmek."
+      ]
+    },
+    "skills": [
+      {
+        "name": "JavaScript",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg"
+      },
+      {
+        "name": "TypeScript",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/typescript/typescript-original.svg"
+      },
+      {
+        "name": "HTML5",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg"
+      },
+      {
+        "name": "CSS3",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/css3/css3-original.svg"
+      },
+      {
+        "name": "React",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg"
+      },
+      {
+        "name": "Tailwind CSS",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/tailwindcss/tailwindcss-original.svg"
+      },
+      {
+        "name": "Redux",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/redux/redux-original.svg"
+      },
+      {
+        "name": "Java",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/java/java-original.svg"
+      },
+      {
+        "name": "Spring Boot",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/spring/spring-original.svg"
+      },
+      {
+        "name": "SQL",
+        "image": "https://astro-provider-logos.s3.us-east-2.amazonaws.com/apache-airflow-providers-common-sql.png"
+      },
+      {
+        "name": "PostgreSQL",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/postgresql/postgresql-original.svg"
+      },
+      {
+        "name": "Cypress",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/cypressio/cypressio-original.svg"
+      },
+      {
+        "name": "VS Code",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/vscode/vscode-original.svg"
+      },
+      {
+        "name": "IntelliJ IDEA",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/intellij/intellij-original.svg"
+      },
+      {
+        "name": "Figma",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/figma/figma-original.svg"
+      },
+      {
+        "name": "MS Office",
+        "image": "https://eniyikurs.net/2239/images/-1431387616f04cc49cf2cf5dffdf5ef9.jpg"
+      }
+    ],
+    "projects": [
+      {
+        "title": "Salise",
+        "technologies": [
+          "React Native",
+          "Expo",
+          "TypeScript",
+          "Reanimated"
+        ],
+        "platform": "android",
+        "store": "https://play.google.com/store/apps/details?id=com.salise.game",
+        "isNew": true,
+        "image": "/projects/salise-tr.png",
+        "description": "Milisaniye hassasiyetinde bir refleks ve zamanlama oyunu. İmleç durmadan ilerliyor, hedef banda girdiği an basıyorsun. Seri büyüdükçe hız artıyor, bant daralıyor ve lanetler kuralları bozuyor. 100 bölümlük kampanya ve sonsuz arcade modu var. Google Play'de yayında."
+      },
+      {
+        "title": "Bilgimetre",
+        "description": "Tarihten spora, müzikten mitolojiye kategorilere ayrılmış genel kültür yarışması. Kategori, mod, zorluk ve soru sayısını seçip şıklı ya da yazmalı modda kendini test edebilirsin.",
+        "technologies": [
+          "React",
+          "TypeScript",
+          "Tailwind"
+        ],
+        "image": "/projects/bilgimetre.png",
+        "website": "https://bilgimetre-life.vercel.app/",
+        "github": "https://github.com/batuhanfidan/bilgimetre"
+      },
+      {
+        "title": "Timing Football Game",
+        "description": "React ve TypeScript ile yapılan milisaniye zamanlama tabanlı futbol oyunu. Hala geliştirme aşamasında.",
+        "technologies": [
+          "React",
+          "TypeScript",
+          "Tailwind"
+        ],
+        "image": "https://i.hizliresim.com/sudzg86.png",
+        "website": "https://game-wine-phi.vercel.app/",
+        "github": "https://github.com/batuhanfidan/game"
+      },
+      {
+        "title": "Quick Blessing",
+        "description": "React ve TypeScript ile yapılan eğlence amaçlı site.",
+        "technologies": [
+          "React",
+          "TypeScript",
+          "Tailwind"
+        ],
+        "image": "https://i.hizliresim.com/jh9frdr.png",
+        "website": "https://quickblessing.vercel.app/",
+        "github": "https://github.com/batuhanfidan/quickblessing"
+      },
+      {
+        "title": "Pizza Sipariş Uygulaması",
+        "description": "Bir pizza sipariş web sitesi geliştirdim. Kullanıcıların pizza seçmesi, sepete eklemesi ve sipariş oluşturması için kullanıcı dostu bir arayüz sundum. Site HTML5, CSS3, JavaScript ve React kullanılarak geliştirildi. Küresel durum yönetimi için Redux, form yönetimi için react-hook-form kullanıldı",
+        "technologies": [
+          "React",
+          "Axios",
+          "Redux",
+          "JavaScript"
+        ],
+        "image": "https://i.hizliresim.com/8mesyw3.png",
+        "website": "https://pizza-challange.vercel.app/",
+        "github": "https://github.com/batuhanfidan/Pizza-challange"
+      },
+      {
+        "title": "Sudoku",
+        "description": "Basit arayüzlü sudoku.",
+        "technologies": [
+          "React",
+          "TypeScript"
+        ],
+        "image": "https://i.hizliresim.com/s5104zc.png",
+        "website": "https://sudoku-eight-wine.vercel.app/",
+        "github": "https://github.com/batuhanfidan/sudoku"
+      },
+      {
+        "title": "Tetris",
+        "description": "Basit arayüzlü tetris.",
+        "technologies": [
+          "React",
+          "JavaScript"
+        ],
+        "image": "https://i.hizliresim.com/kvgh3v3.png",
+        "website": "https://tetris-one-sandy.vercel.app/",
+        "github": "https://github.com/batuhanfidan/tetris"
+      }
+    ]
+  }
+}

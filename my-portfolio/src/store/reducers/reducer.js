@@ -1,27 +1,17 @@
-import {
-  ENGLISH,
-  TURKISH,
-  TOGGLE_DARK_MODE,
-  GET_DATA,
-} from "../actions/action";
+import { ENGLISH, TURKISH, TOGGLE_DARK_MODE } from "../actions/action";
+import siteData from "../../data/data.json";
 
 const initialLanguage = localStorage.getItem("language") || "english";
-const initialDarkMode = localStorage.getItem("darkMode") === "true" || false;
+const initialDarkMode = localStorage.getItem("darkMode") === "true";
 
 const initialState = {
   language: initialLanguage,
   darkMode: initialDarkMode,
-  get_data: null,
+  get_data: siteData,
 };
 
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case GET_DATA:
-      return {
-        ...state,
-        get_data: action.payload ? action.payload[0] : null,
-      };
-
     case TURKISH:
       return { ...state, language: "turkish" };
 

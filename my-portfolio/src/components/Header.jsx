@@ -1,158 +1,149 @@
-import { useDispatch, useSelector } from "react-redux";
-import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { setTurkish, setEnglish } from "../store/actions/action";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, NavLink } from "react-router-dom";
+import { IoSunny, IoMoon } from "react-icons/io5";
+import { HiMenuAlt3, HiX } from "react-icons/hi";
+import {
+  setTurkish,
+  setEnglish,
+  toggleDarkMode,
+} from "../store/actions/action";
+import { sections, sectionLabel } from "../content/sections";
 
 const Header = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const language = useSelector((state) => state.language);
-
+  const darkMode = useSelector((state) => state.darkMode);
   const [menuOpen, setMenuOpen] = useState(false);
+  const tr = language === "turkish";
 
-  const handleLanguageChange = (lang) => {
-    if (lang === "turkish") {
-      dispatch(setTurkish());
-    } else {
-      dispatch(setEnglish());
-    }
+  const themeLabel = tr
+    ? darkMode
+      ? "Açık temaya geç"
+      : "Koyu temaya geç"
+    : darkMode
+      ? "Switch to light mode"
+      : "Switch to dark mode";
+
+  const themeButton = (
+    <button
+      type="button"
+      onClick={() => dispatch(toggleDarkMode())}
+      aria-label={themeLabel}
+      title={themeLabel}
+      className="w-9 h-9 grid place-items-center rounded-full border border-line text-ink hover:bg-surface transition-colors"
+    >
+      <span key={darkMode ? "sun" : "moon"} className="animate-pop">
+        {darkMode ? <IoSunny /> : <IoMoon />}
+      </span>
+    </button>
+  );
+
+  const langButton = (lang, label) => {
+    const active = language === lang;
+    return (
+      <button
+        type="button"
+        onClick={() =>
+          dispatch(lang === "turkish" ? setTurkish() : setEnglish())
+        }
+        aria-pressed={active}
+        className={`px-2.5 py-1 rounded-full transition-colors ${
+          active ? "bg-ink text-bg font-semibold" : "text-muted hover:text-ink"
+        }`}
+      >
+        {label}
+      </button>
+    );
   };
 
-  // === TRANSLATIONS ===
-  const t = {
-    home: language === "turkish" ? "Ana Sayfa" : "Home",
-    skills: language === "turkish" ? "Yetenekler" : "Skills",
-    projects: language === "turkish" ? "Projeler" : "Projects",
-    about: language === "turkish" ? "Hakkımda" : "About Me",
-  };
+  const languageSwitch = (
+    <div className="inline-flex items-center gap-0.5 border border-line rounded-full p-0.5 text-xs">
+      {langButton("turkish", "TR")}
+      {langButton("english", "EN")}
+    </div>
+  );
 
-  const menuLinkClass = ({ isActive }) =>
-    `text-sm hover:underline ${
-      isActive ? "font-semibold" : "text-gray-700 dark:text-gray-200"
-    }`;
+  const navLinks = sections.map((s) => (
+    <NavLink
+      key={s.key}
+      to={s.path}
+      onClick={() => setMenuOpen(false)}
+      className={({ isActive }) =>
+        `group flex items-center gap-2 py-1 font-medium transition-colors ${
+          isActive ? "text-ink" : "text-muted hover:text-ink"
+        }`
+      }
+    >
+      {({ isActive }) => (
+        <>
+          <span
+            aria-hidden="true"
+            className={`w-2.5 h-2.5 rounded-full ${s.color} transition-transform duration-300 ${
+              isActive ? "scale-100" : "scale-0 group-hover:scale-75"
+            }`}
+          />
+          {sectionLabel(s, language)}
+        </>
+      )}
+    </NavLink>
+  ));
 
   return (
-    <header className="py-4 bg-white dark:bg-[#1e1e1e] border-b border-gray-200 dark:border-gray-800">
-      <div className="flex items-center justify-between px-0">
-        {/* LOGO */}
-        <div
-          className="flex items-center gap-2 cursor-pointer pl-6"
-          onClick={() => navigate("/")}
+    <header className="sticky top-0 z-40 bg-bg/80 backdrop-blur-md border-b border-line">
+      <div className="max-w-6xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between gap-4">
+        <Link
+          to="/"
+          className="flex items-center gap-3 group"
+          onClick={() => setMenuOpen(false)}
         >
-          <div className="w-4 h-4 rounded-full bg-yellow-400" />
-          <div className="flex flex-col">
-            <span className="font-semibold text-lg text-black dark:text-white">
+          <span aria-hidden="true" className="flex -space-x-1.5">
+            <span className="w-4 h-4 rounded-full bg-sun ring-2 ring-bg transition-transform group-hover:-translate-y-1" />
+            <span className="w-4 h-4 rounded-full bg-coral ring-2 ring-bg transition-transform delay-75 group-hover:-translate-y-1" />
+            <span className="w-4 h-4 rounded-full bg-sky ring-2 ring-bg transition-transform delay-150 group-hover:-translate-y-1" />
+          </span>
+          <span className="flex flex-col leading-tight">
+            <span className="font-display font-bold text-lg text-ink">
               Batuhan Fidan
             </span>
-            <span className="text-xs text-gray-500 dark:text-gray-400">
-              Full Stack Developer
-            </span>
-          </div>
-        </div>
+            <span className="text-xs text-muted">Full Stack Developer</span>
+          </span>
+        </Link>
 
-        {/* DESKTOP MENU */}
-        <div className="hidden md:flex items-center gap-6 pr-6">
-          <NavLink to="/" className={menuLinkClass}>
-            {t.home}
-          </NavLink>
+        <nav className="hidden md:flex items-center gap-7 text-sm">
+          {navLinks}
+        </nav>
 
-          <NavLink to="/skills" className={menuLinkClass}>
-            {t.skills}
-          </NavLink>
-
-          <NavLink to="/projects" className={menuLinkClass}>
-            {t.projects}
-          </NavLink>
-
-          <NavLink to="/about" className={menuLinkClass}>
-            {t.about}
-          </NavLink>
-
-          {/* LANG */}
-          <div className="flex gap-1 items-center border rounded-full px-2 py-1 text-xs">
-            <button
-              onClick={() => handleLanguageChange("turkish")}
-              className={language === "turkish" ? "font-bold" : ""}
-            >
-              TR
-            </button>
-            <span>|</span>
-            <button
-              onClick={() => handleLanguageChange("english")}
-              className={language === "english" ? "font-bold" : ""}
-            >
-              EN
-            </button>
-          </div>
-        </div>
-
-        {/* MOBILE */}
-        <div className="md:hidden flex items-center gap-4">
-          {/* LANG */}
-          <div className="flex gap-1 items-center border rounded-full px-2 py-1 text-xs">
-            <button
-              onClick={() => handleLanguageChange("turkish")}
-              className={language === "turkish" ? "font-bold" : ""}
-            >
-              TR
-            </button>
-            <span>|</span>
-            <button
-              onClick={() => handleLanguageChange("english")}
-              className={language === "english" ? "font-bold" : ""}
-            >
-              EN
-            </button>
-          </div>
-
-          {/* MOBILE MENU BUTTON */}
+        <div className="flex items-center gap-2">
+          <div className="hidden sm:block">{languageSwitch}</div>
+          {themeButton}
           <button
-            className="text-2xl pr-6"
-            onClick={() => setMenuOpen(!menuOpen)}
+            type="button"
+            className="md:hidden w-9 h-9 grid place-items-center rounded-full border border-line text-xl"
+            aria-label={tr ? "Menüyü aç/kapat" : "Toggle menu"}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+            onClick={() => setMenuOpen((open) => !open)}
           >
-            ☰
+            {menuOpen ? <HiX /> : <HiMenuAlt3 />}
           </button>
         </div>
       </div>
 
-      {/* MOBILE DROPDOWN */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        id="mobile-menu"
+        className={`md:hidden grid transition-[grid-template-rows] duration-300 ease-out ${
+          menuOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
         }`}
       >
-        <div className="flex flex-col gap-4 pb-4 border-t pt-4 pr-6 items-end">
-          <NavLink
-            to="/"
-            className={menuLinkClass}
-            onClick={() => setMenuOpen(false)}
+        <div className="overflow-hidden">
+          <nav
+            className="flex flex-col gap-3 px-5 pb-5 pt-2 text-lg"
+            inert={!menuOpen}
           >
-            {t.home}
-          </NavLink>
-
-          <NavLink
-            to="/skills"
-            className={menuLinkClass}
-            onClick={() => setMenuOpen(false)}
-          >
-            {t.skills}
-          </NavLink>
-
-          <NavLink
-            to="/projects"
-            className={menuLinkClass}
-            onClick={() => setMenuOpen(false)}
-          >
-            {t.projects}
-          </NavLink>
-
-          <NavLink
-            to="/about"
-            className={menuLinkClass}
-            onClick={() => setMenuOpen(false)}
-          >
-            {t.about}
-          </NavLink>
+            {navLinks}
+            <div className="sm:hidden pt-2">{languageSwitch}</div>
+          </nav>
         </div>
       </div>
     </header>
