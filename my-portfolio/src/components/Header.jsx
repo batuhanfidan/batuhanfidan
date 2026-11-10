@@ -101,6 +101,7 @@ const Header = () => {
             <span className="w-4 h-4 rounded-full bg-sun ring-2 ring-bg transition-transform group-hover:-translate-y-1" />
             <span className="w-4 h-4 rounded-full bg-coral ring-2 ring-bg transition-transform delay-75 group-hover:-translate-y-1" />
             <span className="w-4 h-4 rounded-full bg-sky ring-2 ring-bg transition-transform delay-150 group-hover:-translate-y-1" />
+            <span className="w-4 h-4 rounded-full bg-leaf ring-2 ring-bg transition-transform delay-200 group-hover:-translate-y-1" />
           </span>
           <span className="flex flex-col leading-tight">
             <span className="font-display font-bold text-lg text-ink">

@@ -17,6 +17,10 @@ const NotFound = () => {
           className="w-8 h-8 rounded-full bg-sky animate-ball-drop"
           style={{ animationDelay: "240ms" }}
         />
+        <span
+          className="w-11 h-11 rounded-full bg-leaf animate-ball-drop"
+          style={{ animationDelay: "360ms" }}
+        />
       </div>
       <h1 className="font-display font-extrabold text-7xl tracking-tight text-ink">
         404

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-const Reveal = ({ as = "div", delay = 0, className = "", children, ...rest }) => {
+const Reveal = ({ as = "div", variant, delay = 0, className = "", children, ...rest }) => {
   const Tag = as;
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -24,7 +24,7 @@ const Reveal = ({ as = "div", delay = 0, className = "", children, ...rest }) =>
   return (
     <Tag
       ref={ref}
-      className={`reveal ${visible ? "is-visible" : ""} ${className}`}
+      className={`${variant ? `reveal-${variant}` : "reveal"} ${visible ? "is-visible" : ""} ${className}`}
       style={{ transitionDelay: `${delay}ms` }}
       {...rest}
     >

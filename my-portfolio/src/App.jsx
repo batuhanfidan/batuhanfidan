@@ -5,9 +5,14 @@ import { useSelector } from "react-redux";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
+import RouteBar from "./components/RouteBar";
+import AirTrail from "./components/AirTrail";
+import IntroOrbs from "./components/IntroOrbs";
+import AirGust from "./components/AirGust";
 import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
+import ProjectDetail from "./pages/ProjectDetail";
 import NotFound from "./pages/NotFound";
 
 function App() {
@@ -31,6 +36,10 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col bg-bg text-ink transition-colors duration-300">
       <Header />
+      <RouteBar pathname={location.pathname} />
+      <AirTrail />
+      <IntroOrbs />
+      <AirGust />
 
       <main key={location.pathname} className="flex-1 animate-page-in">
         <Routes location={location}>
@@ -38,6 +47,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:slug" element={<ProjectDetail />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

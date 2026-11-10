@@ -3,7 +3,7 @@
     "hero": {
       "hello": "Hello",
       "aboutTitle": "I'm Batuhan",
-      "aboutText": "I'm a full-stack developer focused on building modern, scalable, and user-friendly applications. I work with React, Redux, Tailwind, Node.js, Java, Spring Boot, and SQL. With strong analytical skills and experience in communication and problem solving, I create efficient digital solutions and continuously improve myself by building new projects."
+      "aboutText": "I'm a full-stack developer building apps for the web and mobile. I write interfaces with React, TypeScript and Tailwind, and backends with Java, Spring Boot, Node.js and SQL. My reflex game Salise, built with React Native and Expo, is live on Google Play."
     },
     "aboutMe": {
       "info": {
@@ -13,7 +13,8 @@
         "education": "Bursa Uludag University"
       },
       "desc": [
-        "Hello, I'm Batuhan. I am a full-stack developer focused on building modern, scalable, and user-friendly digital solutions. During my full-stack training, I worked extensively with React, JavaScript, HTML, CSS, Redux, Tailwind, Node.js, Java, Spring Boot, and SQL.",
+        "Hello, I'm Batuhan. I'm a full-stack developer building modern, user-friendly apps for the web and mobile. During my full-stack training I focused on React, JavaScript, Redux, Tailwind, Node.js, Java, Spring Boot and SQL, and later moved on to TypeScript and React Native.",
+        "My latest project is Salise, a reflex and timing game built with React Native and Expo and live on Google Play.",
         "I previously worked in the education consultancy sector, which helped me strengthen my communication, analytical thinking, and problem-solving skills. With strong discipline and passion for software development, I continue to learn new technologies and build projects every day.",
         "My goal is to combine my analytical mindset with my technical skills to create efficient and modern applications that provide real value to users."
       ]
@@ -21,67 +22,93 @@
     "skills": [
       {
         "name": "JavaScript",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg",
+        "category": "frontend"
       },
       {
         "name": "TypeScript",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/typescript/typescript-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/typescript/typescript-original.svg",
+        "category": "frontend"
       },
       {
         "name": "HTML5",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg",
+        "category": "frontend"
       },
       {
         "name": "CSS3",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/css3/css3-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/css3/css3-original.svg",
+        "category": "frontend"
       },
       {
         "name": "React",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg",
+        "category": "frontend"
       },
       {
         "name": "Tailwind CSS",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/tailwindcss/tailwindcss-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/tailwindcss/tailwindcss-original.svg",
+        "category": "frontend"
       },
       {
         "name": "Redux",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/redux/redux-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/redux/redux-original.svg",
+        "category": "frontend"
+      },
+      {
+        "name": "React Native",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg",
+        "category": "mobile"
+      },
+      {
+        "name": "Expo",
+        "image": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/expo.svg",
+        "category": "mobile"
       },
       {
         "name": "Java",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/java/java-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/java/java-original.svg",
+        "category": "backend"
       },
       {
         "name": "Spring Boot",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/spring/spring-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/spring/spring-original.svg",
+        "category": "backend"
+      },
+      {
+        "name": "Node.js",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/nodejs/nodejs-original.svg",
+        "category": "backend"
       },
       {
         "name": "SQL",
-        "image": "https://astro-provider-logos.s3.us-east-2.amazonaws.com/apache-airflow-providers-common-sql.png"
+        "image": "https://astro-provider-logos.s3.us-east-2.amazonaws.com/apache-airflow-providers-common-sql.png",
+        "category": "backend"
       },
       {
         "name": "PostgreSQL",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/postgresql/postgresql-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/postgresql/postgresql-original.svg",
+        "category": "backend"
       },
       {
         "name": "Cypress",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/cypressio/cypressio-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/cypressio/cypressio-original.svg",
+        "category": "tools"
       },
       {
         "name": "VS Code",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/vscode/vscode-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/vscode/vscode-original.svg",
+        "category": "tools"
       },
       {
         "name": "IntelliJ IDEA",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/intellij/intellij-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/intellij/intellij-original.svg",
+        "category": "tools"
       },
       {
         "name": "Figma",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/figma/figma-original.svg"
-      },
-      {
-        "name": "MS Office",
-        "image": "https://eniyikurs.net/2239/images/-1431387616f04cc49cf2cf5dffdf5ef9.jpg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/figma/figma-original.svg",
+        "category": "tools"
       }
     ],
     "projects": [
@@ -97,7 +124,34 @@
         "store": "https://play.google.com/store/apps/details?id=com.salise.game",
         "isNew": true,
         "image": "/projects/salise-en.png",
-        "description": "A reflex and timing game played to the millisecond. The cursor never stops; tap the moment it enters the target band. As your streak grows the speed rises, the band narrows and curses bend the rules. Includes a 100-level campaign and an endless arcade mode. Live on Google Play."
+        "description": "A reflex and timing game played to the millisecond. The cursor never stops; tap the moment it enters the target band. As your streak grows the speed rises, the band narrows and curses bend the rules. Includes a 100-level campaign and an endless arcade mode. Live on Google Play.",
+        "tags": [
+          "mobile",
+          "game"
+        ],
+        "slug": "salise",
+        "gallery": [
+          {
+            "src": "/projects/salise/01-oyun.en.webp",
+            "alt": "Gameplay"
+          },
+          {
+            "src": "/projects/salise/02-menu.en.webp",
+            "alt": "Main menu"
+          },
+          {
+            "src": "/projects/salise/03-harita.en.webp",
+            "alt": "Level map"
+          },
+          {
+            "src": "/projects/salise/04-rekor.en.webp",
+            "alt": "Record screen"
+          },
+          {
+            "src": "/projects/salise/05-arcade.en.webp",
+            "alt": "Arcade mode"
+          }
+        ]
       },
       {
         "title": "Bilgimetre",
@@ -109,7 +163,11 @@
         ],
         "image": "/projects/bilgimetre.png",
         "website": "https://bilgimetre-life.vercel.app/",
-        "github": "https://github.com/batuhanfidan/bilgimetre"
+        "github": "https://github.com/batuhanfidan/bilgimetre",
+        "tags": [
+          "web",
+          "game"
+        ]
       },
       {
         "title": "Timing Football Game",
@@ -121,7 +179,11 @@
         ],
         "image": "https://i.hizliresim.com/sudzg86.png",
         "website": "https://game-wine-phi.vercel.app/",
-        "github": "https://github.com/batuhanfidan/game"
+        "github": "https://github.com/batuhanfidan/game",
+        "tags": [
+          "web",
+          "game"
+        ]
       },
       {
         "title": "Quick Blessing",
@@ -133,20 +195,10 @@
         ],
         "image": "https://i.hizliresim.com/jh9frdr.png",
         "website": "https://quickblessing.vercel.app/",
-        "github": "https://github.com/batuhanfidan/quickblessing"
-      },
-      {
-        "title": "Pizza Ordering App",
-        "description": "I developed a pizza ordering website with a user-friendly interface for selecting pizzas, managing the cart, and completing orders. The site uses HTML5, CSS3, JavaScript, and React.",
-        "technologies": [
-          "React",
-          "Axios",
-          "Redux",
-          "JavaScript"
-        ],
-        "image": "https://i.hizliresim.com/8mesyw3.png",
-        "website": "https://pizza-challange.vercel.app/",
-        "github": "https://github.com/batuhanfidan/Pizza-challange"
+        "github": "https://github.com/batuhanfidan/quickblessing",
+        "tags": [
+          "web"
+        ]
       },
       {
         "title": "Sudoku",
@@ -157,7 +209,11 @@
         ],
         "image": "https://i.hizliresim.com/s5104zc.png",
         "website": "https://sudoku-eight-wine.vercel.app/",
-        "github": "https://github.com/batuhanfidan/sudoku"
+        "github": "https://github.com/batuhanfidan/sudoku",
+        "tags": [
+          "web",
+          "game"
+        ]
       },
       {
         "title": "Tetris",
@@ -168,7 +224,11 @@
         ],
         "image": "https://i.hizliresim.com/kvgh3v3.png",
         "website": "https://tetris-one-sandy.vercel.app/",
-        "github": "https://github.com/batuhanfidan/tetris"
+        "github": "https://github.com/batuhanfidan/tetris",
+        "tags": [
+          "web",
+          "game"
+        ]
       }
     ]
   },
@@ -176,7 +236,7 @@
     "hero": {
       "hello": "Merhaba",
       "aboutTitle": "Ben Batuhan",
-      "aboutText": "Modern, ölçeklenebilir ve kullanıcı dostu uygulamalar geliştiren bir full-stack developerım. React, Redux, Tailwind, Node.js, Java, Spring Boot ve SQL teknolojileriyle çalışıyorum. Analitik düşünme, iletişim ve problem çözme becerilerimle verimli dijital çözümler üretiyor ve her gün yeni projeler geliştirerek kendimi geliştirmeye devam ediyorum."
+      "aboutText": "Web ve mobil için uygulamalar geliştiren bir full-stack developerım. Arayüzleri React, TypeScript ve Tailwind ile; backend tarafını Java, Spring Boot, Node.js ve SQL ile yazıyorum. React Native ve Expo ile geliştirdiğim refleks oyunu Salise, Google Play'de yayında."
     },
     "aboutMe": {
       "info": {
@@ -186,7 +246,8 @@
         "education": "Bursa Uludağ Üniversitesi"
       },
       "desc": [
-        "Merhaba, ben Batuhan. Modern, ölçeklenebilir ve kullanıcı dostu dijital çözümler geliştirmeye odaklanan bir full-stack developerım. Full-stack eğitim sürecimde React, JavaScript, HTML, CSS, Redux, Tailwind, Node.js, Java, Spring Boot ve SQL üzerine yoğunlaştım.",
+        "Merhaba, ben Batuhan. Web ve mobil için modern, kullanıcı dostu uygulamalar geliştiren bir full-stack developerım. Full-stack eğitimimde React, JavaScript, Redux, Tailwind, Node.js, Java, Spring Boot ve SQL üzerine yoğunlaştım; sonrasında TypeScript ve React Native ile devam ettim.",
+        "Son projem Salise, React Native ve Expo ile geliştirdiğim ve Google Play'de yayında olan bir refleks ve zamanlama oyunu.",
         "Daha önce eğitim danışmanlığı sektöründe çalıştım ve bu süreç iletişim, analiz ve problem çözme yeteneklerimi güçlendirdi. Disiplinli çalışma alışkanlığım ve yazılım geliştirme tutkum sayesinde her gün yeni teknolojiler öğrenmeye ve projeler geliştirmeye devam ediyorum.",
         "Hedefim, analitik düşünme becerilerimi teknik yeteneklerimle birleştirerek kullanıcıya gerçek değer sağlayan verimli ve modern uygulamalar geliştirmek."
       ]
@@ -194,67 +255,93 @@
     "skills": [
       {
         "name": "JavaScript",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg",
+        "category": "frontend"
       },
       {
         "name": "TypeScript",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/typescript/typescript-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/typescript/typescript-original.svg",
+        "category": "frontend"
       },
       {
         "name": "HTML5",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg",
+        "category": "frontend"
       },
       {
         "name": "CSS3",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/css3/css3-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/css3/css3-original.svg",
+        "category": "frontend"
       },
       {
         "name": "React",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg",
+        "category": "frontend"
       },
       {
         "name": "Tailwind CSS",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/tailwindcss/tailwindcss-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/tailwindcss/tailwindcss-original.svg",
+        "category": "frontend"
       },
       {
         "name": "Redux",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/redux/redux-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/redux/redux-original.svg",
+        "category": "frontend"
+      },
+      {
+        "name": "React Native",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg",
+        "category": "mobile"
+      },
+      {
+        "name": "Expo",
+        "image": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/expo.svg",
+        "category": "mobile"
       },
       {
         "name": "Java",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/java/java-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/java/java-original.svg",
+        "category": "backend"
       },
       {
         "name": "Spring Boot",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/spring/spring-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/spring/spring-original.svg",
+        "category": "backend"
+      },
+      {
+        "name": "Node.js",
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/nodejs/nodejs-original.svg",
+        "category": "backend"
       },
       {
         "name": "SQL",
-        "image": "https://astro-provider-logos.s3.us-east-2.amazonaws.com/apache-airflow-providers-common-sql.png"
+        "image": "https://astro-provider-logos.s3.us-east-2.amazonaws.com/apache-airflow-providers-common-sql.png",
+        "category": "backend"
       },
       {
         "name": "PostgreSQL",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/postgresql/postgresql-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/postgresql/postgresql-original.svg",
+        "category": "backend"
       },
       {
         "name": "Cypress",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/cypressio/cypressio-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/cypressio/cypressio-original.svg",
+        "category": "tools"
       },
       {
         "name": "VS Code",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/vscode/vscode-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/vscode/vscode-original.svg",
+        "category": "tools"
       },
       {
         "name": "IntelliJ IDEA",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/intellij/intellij-original.svg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/intellij/intellij-original.svg",
+        "category": "tools"
       },
       {
         "name": "Figma",
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/figma/figma-original.svg"
-      },
-      {
-        "name": "MS Office",
-        "image": "https://eniyikurs.net/2239/images/-1431387616f04cc49cf2cf5dffdf5ef9.jpg"
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/figma/figma-original.svg",
+        "category": "tools"
       }
     ],
     "projects": [
@@ -270,7 +357,34 @@
         "store": "https://play.google.com/store/apps/details?id=com.salise.game",
         "isNew": true,
         "image": "/projects/salise-tr.png",
-        "description": "Milisaniye hassasiyetinde bir refleks ve zamanlama oyunu. İmleç durmadan ilerliyor, hedef banda girdiği an basıyorsun. Seri büyüdükçe hız artıyor, bant daralıyor ve lanetler kuralları bozuyor. 100 bölümlük kampanya ve sonsuz arcade modu var. Google Play'de yayında."
+        "description": "Milisaniye hassasiyetinde bir refleks ve zamanlama oyunu. İmleç durmadan ilerliyor, hedef banda girdiği an basıyorsun. Seri büyüdükçe hız artıyor, bant daralıyor ve lanetler kuralları bozuyor. 100 bölümlük kampanya ve sonsuz arcade modu var. Google Play'de yayında.",
+        "tags": [
+          "mobile",
+          "game"
+        ],
+        "slug": "salise",
+        "gallery": [
+          {
+            "src": "/projects/salise/01-oyun.tr.webp",
+            "alt": "Oyun ekranı"
+          },
+          {
+            "src": "/projects/salise/02-menu.tr.webp",
+            "alt": "Ana menü"
+          },
+          {
+            "src": "/projects/salise/03-harita.tr.webp",
+            "alt": "Bölüm haritası"
+          },
+          {
+            "src": "/projects/salise/04-rekor.tr.webp",
+            "alt": "Rekor ekranı"
+          },
+          {
+            "src": "/projects/salise/05-arcade.tr.webp",
+            "alt": "Arcade modu"
+          }
+        ]
       },
       {
         "title": "Bilgimetre",
@@ -282,7 +396,11 @@
         ],
         "image": "/projects/bilgimetre.png",
         "website": "https://bilgimetre-life.vercel.app/",
-        "github": "https://github.com/batuhanfidan/bilgimetre"
+        "github": "https://github.com/batuhanfidan/bilgimetre",
+        "tags": [
+          "web",
+          "game"
+        ]
       },
       {
         "title": "Timing Football Game",
@@ -294,7 +412,11 @@
         ],
         "image": "https://i.hizliresim.com/sudzg86.png",
         "website": "https://game-wine-phi.vercel.app/",
-        "github": "https://github.com/batuhanfidan/game"
+        "github": "https://github.com/batuhanfidan/game",
+        "tags": [
+          "web",
+          "game"
+        ]
       },
       {
         "title": "Quick Blessing",
@@ -306,20 +428,10 @@
         ],
         "image": "https://i.hizliresim.com/jh9frdr.png",
         "website": "https://quickblessing.vercel.app/",
-        "github": "https://github.com/batuhanfidan/quickblessing"
-      },
-      {
-        "title": "Pizza Sipariş Uygulaması",
-        "description": "Bir pizza sipariş web sitesi geliştirdim. Kullanıcıların pizza seçmesi, sepete eklemesi ve sipariş oluşturması için kullanıcı dostu bir arayüz sundum. Site HTML5, CSS3, JavaScript ve React kullanılarak geliştirildi. Küresel durum yönetimi için Redux, form yönetimi için react-hook-form kullanıldı",
-        "technologies": [
-          "React",
-          "Axios",
-          "Redux",
-          "JavaScript"
-        ],
-        "image": "https://i.hizliresim.com/8mesyw3.png",
-        "website": "https://pizza-challange.vercel.app/",
-        "github": "https://github.com/batuhanfidan/Pizza-challange"
+        "github": "https://github.com/batuhanfidan/quickblessing",
+        "tags": [
+          "web"
+        ]
       },
       {
         "title": "Sudoku",
@@ -330,7 +442,11 @@
         ],
         "image": "https://i.hizliresim.com/s5104zc.png",
         "website": "https://sudoku-eight-wine.vercel.app/",
-        "github": "https://github.com/batuhanfidan/sudoku"
+        "github": "https://github.com/batuhanfidan/sudoku",
+        "tags": [
+          "web",
+          "game"
+        ]
       },
       {
         "title": "Tetris",
@@ -341,7 +457,11 @@
         ],
         "image": "https://i.hizliresim.com/kvgh3v3.png",
         "website": "https://tetris-one-sandy.vercel.app/",
-        "github": "https://github.com/batuhanfidan/tetris"
+        "github": "https://github.com/batuhanfidan/tetris",
+        "tags": [
+          "web",
+          "game"
+        ]
       }
     ]
   }

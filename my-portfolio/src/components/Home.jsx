@@ -1,13 +1,18 @@
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import CircleButton from "./CircleButton";
-import foto from "../assets/foto.jpg";
-import { sections, sectionLabel } from "../content/sections";
+import MiniGame from "./MiniGame";
+import ElementMark from "./ElementMark";
+import WindCurrents from "./WindCurrents";
+import ArrowMark from "./ArrowMark";
+import foto from "../assets/foto.webp";
+import { sections, sectionLabel, elements } from "../content/sections";
 
 const orbitBalls = [
-  { color: "bg-sun", pos: "left-1/2 top-0", size: "w-9 h-9 sm:w-12 sm:h-12", delay: 500 },
-  { color: "bg-coral", pos: "left-[93.3%] top-3/4", size: "w-7 h-7 sm:w-9 sm:h-9", delay: 650 },
-  { color: "bg-sky", pos: "left-[6.7%] top-3/4", size: "w-11 h-11 sm:w-14 sm:h-14", delay: 800 },
+  { element: "air", pos: "left-1/2 top-0", size: "w-11 h-11 sm:w-14 sm:h-14", mark: "w-6 h-6 sm:w-8 sm:h-8", delay: 500 },
+  { element: "fire", pos: "left-full top-1/2", size: "w-10 h-10 sm:w-12 sm:h-12", mark: "w-6 h-6 sm:w-7 sm:h-7", delay: 640 },
+  { element: "earth", pos: "left-1/2 top-full", size: "w-12 h-12 sm:w-14 sm:h-14", mark: "w-7 h-7 sm:w-8 sm:h-8", delay: 780 },
+  { element: "water", pos: "left-0 top-1/2", size: "w-10 h-10 sm:w-12 sm:h-12", mark: "w-6 h-6 sm:w-7 sm:h-7", delay: 920 },
 ];
 
 const Home = () => {
@@ -19,7 +24,10 @@ const Home = () => {
   const latest = content.projects.find((p) => p.isNew);
 
   return (
-    <section className="max-w-6xl mx-auto px-5 md:px-8 pt-10 pb-8 md:pt-16 lg:pt-20 grid gap-14 lg:gap-10 lg:grid-cols-[1.1fr_1fr] items-center">
+    <>
+    <div className="relative overflow-hidden">
+    <WindCurrents className="animate-page-in" />
+    <section className="relative max-w-6xl mx-auto px-5 md:px-8 pt-10 pb-8 md:pt-16 lg:pt-20 grid gap-14 lg:gap-10 lg:grid-cols-[1.1fr_1fr] items-center">
       <div className="order-2 lg:order-1 text-center lg:text-left">
         {latest && (
           <Link
@@ -61,11 +69,25 @@ const Home = () => {
               key={s.key}
               text={sectionLabel(s, language)}
               color={s.color}
+              element={s.element}
               delay={450 + i * 140}
               onClick={() => navigate(s.path)}
             />
           ))}
         </div>
+
+        <a
+          href="#mini-game"
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById("mini-game")?.scrollIntoView({ behavior: "smooth" });
+          }}
+          aria-label={tr ? "Aşağıdaki oyuna in" : "Scroll down to the game"}
+          className="group animate-rise mt-12 inline-flex flex-col items-center gap-2 text-sky"
+          style={{ animationDelay: "1000ms" }}
+        >
+          <ArrowMark className="w-8 h-16 animate-arrow-bob transition-transform group-hover:scale-110" />
+        </a>
       </div>
 
       <div className="order-1 lg:order-2 flex justify-center">
@@ -74,13 +96,17 @@ const Home = () => {
             <div className="absolute inset-0 rounded-full border-2 border-dashed border-line" />
             {orbitBalls.map((b) => (
               <span
-                key={b.color}
+                key={b.element}
                 className={`absolute ${b.pos} -translate-x-1/2 -translate-y-1/2`}
               >
-                <span
-                  className={`block rounded-full ${b.color} ${b.size} animate-ball-drop`}
-                  style={{ animationDelay: `${b.delay}ms` }}
-                />
+                <span className="block animate-counter-orbit">
+                  <span
+                    className={`grid place-items-center rounded-full ${elements[b.element].color} ${b.size} text-[#151826] animate-ball-drop`}
+                    style={{ animationDelay: `${b.delay}ms` }}
+                  >
+                    <ElementMark element={b.element} className={b.mark} />
+                  </span>
+                </span>
               </span>
             ))}
           </div>
@@ -96,6 +122,12 @@ const Home = () => {
         </div>
       </div>
     </section>
+    </div>
+    <MiniGame
+      language={language}
+      storeUrl={content.projects.find((p) => p.slug === "salise")?.store}
+    />
+    </>
   );
 };
 

@@ -1,4 +1,8 @@
-import { ENGLISH, TURKISH, TOGGLE_DARK_MODE } from "../actions/action";
+import {
+  ENGLISH,
+  TURKISH,
+  TOGGLE_DARK_MODE,
+} from "../actions/action";
 import siteData from "../../data/data.json";
 
 const initialLanguage = localStorage.getItem("language") || "english";

@@ -21,7 +21,7 @@ const About = () => {
 
   return (
     <section className="max-w-6xl mx-auto px-5 md:px-8 pt-12 md:pt-16">
-      <PageHeader color="bg-sky" title={tr ? "Hakkımda" : "About me"} />
+      <PageHeader element="water" title={tr ? "Hakkımda" : "About me"} />
 
       <div className="grid gap-12 lg:grid-cols-[1fr_1.6fr] items-start">
         <dl
@@ -52,7 +52,7 @@ const About = () => {
                 {text}
               </p>
             ) : (
-              <Reveal as="p" key={i} className="text-lg leading-relaxed text-muted">
+              <Reveal as="p" variant="water" key={i} className="text-lg leading-relaxed text-muted">
                 {text}
               </Reveal>
             )
